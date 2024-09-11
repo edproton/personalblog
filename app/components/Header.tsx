@@ -1,39 +1,28 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
-import { Download, Moon, Sun } from "lucide-react";
-import { useTheme } from "next-themes";
-import Footer from "./Footer";
+import { motion } from "framer-motion";
 import Image from "next/image";
-import Timeline from "./Timeline";
-import jobs from "../data/jobs";
+import profilePicture from "@/app/images/companies/profile.png";
 
-export default function Portfolio() {
-  const { theme, setTheme } = useTheme();
-
+export default function Header() {
   return (
-    <div className="min-h-screen bg-background text-foreground">
-      {/* Dark/Light Mode Toggle */}
-      <div className="container mx-auto px-4 py-4 flex justify-end">
-        <Button
-          variant="ghost"
-          size="icon"
-          onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-          aria-label="Toggle theme"
-        >
-          {theme === "dark" ? (
-            <Sun className="h-6 w-6" />
-          ) : (
-            <Moon className="h-6 w-6" />
-          )}
-        </Button>
-      </div>
-
-      {/* Header Section with Image */}
-      <header className="container mx-auto px-4 py-16">
-        <div className="relative flex flex-col md:flex-row items-center">
-          <div className="md:w-3/4 z-10">
-            <h1 className="text-4xl font-bold mb-2">Eduardo Carvalho</h1>
+    <header className="container mx-auto px-4 py-16">
+      <div className="relative flex flex-col md:flex-row items-center">
+        <div className="md:w-3/4 z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+          >
+            <h1 className="text-4xl font-bold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">
+              Eduardo Carvalho
+            </h1>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+          >
             <h2 className="text-2xl text-muted-foreground mb-4">
               Full Stack Developer
             </h2>
@@ -43,32 +32,24 @@ export default function Portfolio() {
               technologies, I strive to build scalable and user-friendly
               applications.
             </p>
-          </div>
-          <div className="md:w-1/3 md:absolute md:right-0 md:top-0 mt-8 md:mt-0">
+          </motion.div>
+        </div>
+        <div className="md:w-1/3 md:absolute md:right-0 md:top-0">
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 0.3 }}
+            className="relative w-[300px] h-[300px]"
+          >
             <Image
-              src="/placeholder.svg?height=300&width=300"
-              alt="John Doe"
-              className="rounded-full shadow-lg"
-              width={300}
-              height={300}
+              src={profilePicture}
+              alt="Eduardo Carvalho"
+              layout="fill"
+              objectFit="cover"
             />
-          </div>
+          </motion.div>
         </div>
-      </header>
-
-      {/* Experience Section */}
-      <section className="container mx-auto px-4 py-16">
-        <h2 className="text-3xl font-bold text-center mb-8">Experience</h2>
-        <Timeline jobs={jobs} />
-
-        <div className="text-center mt-8">
-          <Button>
-            <Download className="mr-2 h-4 w-4" /> Resume
-          </Button>
-        </div>
-      </section>
-
-      <Footer />
-    </div>
+      </div>
+    </header>
   );
 }
