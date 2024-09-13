@@ -100,7 +100,7 @@ export const TimelineItem: React.FC<TimelineItemProps> = ({
               </p>
             </div>
             <Image
-              src={job.info.image}
+              src={job.info.imageSrc}
               alt={job.company}
               width={40}
               height={40}

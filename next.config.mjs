@@ -9,10 +9,6 @@ const nextConfig = {
                 hostname: 'github.com'
             }
         ],
-    },
-    i18n: {
-        locales: ['en', 'pt-PT'],
-        defaultLocale: 'en',
     }
 };
 

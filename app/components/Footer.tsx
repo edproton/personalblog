@@ -77,7 +77,7 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4 text-primary">About</h3>
             <p className="text-gray-600 dark:text-gray-300">
               Decoding complexity, architecting solutions, and sparking dev
-              dialogues. Let's build something extraordinary.
+              dialogues. Let&#39;s build something extraordinary.
             </p>
           </div>
         </div>

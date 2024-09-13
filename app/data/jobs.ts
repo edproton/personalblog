@@ -1,8 +1,4 @@
 import { Job } from "../types";
-import ordemEnfermeirosLogo from "@/app/images/companies/ordem_enfermeiros_logo.jpg";
-import farfetchLogo from "@/app/images/companies/farfetch_logo.jpg";
-import brainrLogo from "@/app/images/companies/brainr_logo.jpg";
-import janelaDigitalLogo from "@/app/images/companies/janela_digital_logo.jpg";
 
 const jobs: Job[] = [
   {
@@ -12,7 +8,7 @@ const jobs: Job[] = [
       start: new Date(2024, 6),
     },
     info: {
-      image: ordemEnfermeirosLogo,
+      imageSrc: "/companies/ordem_enfermeiros_logo.jpg",
       domain: "Healthcare",
       technologiesKeys: [
         "git",
@@ -37,7 +33,7 @@ const jobs: Job[] = [
       end: new Date(2024, 4),
     },
     info: {
-      image: farfetchLogo,
+      imageSrc: "/companies/farfetch_logo.jpg",
       domain: "E-commerce",
       technologiesKeys: [
         "git",
@@ -68,7 +64,7 @@ const jobs: Job[] = [
       end: new Date(2022, 2),
     },
     info: {
-      image: brainrLogo,
+      imageSrc: "/companies/brainr_logo.jpg",
       domain: "Industry 4.0",
       technologiesKeys: [
         "git",
@@ -90,7 +86,7 @@ const jobs: Job[] = [
     company: "Janela Digital S.A",
     title: "Junior .NET Developer",
     info: {
-      image: janelaDigitalLogo,
+      imageSrc: "/companies/janela_digital_logo.jpg",
       domain: "Real Estate",
       technologiesKeys: [
         "git",

@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import profilePicture from "@/app/images/profile.png";
 
 export default function Header() {
   return (
@@ -36,7 +35,7 @@ export default function Header() {
         >
           <div className="relative w-48 h-48 md:w-64 md:h-64 overflow-hidden rounded-lg">
             <Image
-              src={profilePicture}
+              src={`/profile.png`}
               alt="Eduardo Carvalho"
               fill
               sizes="(max-width: 768px) 192px, 256px"

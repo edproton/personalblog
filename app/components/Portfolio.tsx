@@ -1,11 +1,12 @@
 import { Button } from "@/components/ui/button";
-import { Download } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import Footer from "./Footer";
 import Timeline from "./Timeline";
 import Services from "./Services";
 import jobs from "../data/jobs";
 import Header from "./Header";
 import ThemeToggle from "./ThemeToggle";
+import Link from "next/link";
 
 export default function Portfolio() {
   return (
@@ -30,8 +31,21 @@ export default function Portfolio() {
           className="container mx-auto px-4 py-8 text-center"
         >
           <h2 className="text-2xl font-bold mb-4">Contact</h2>
-          <Button className="bg-primary text-primary-foreground hover:bg-primary/90 transition-colors duration-200">
-            <Download className="mr-2 h-4 w-4" /> Download Resume
+          <Button
+            asChild
+            className="bg-primary text-primary-foreground hover:bg-primary/90 transition-colors duration-200"
+            aria-label="View Resume (opens in a new tab)"
+          >
+            <Link
+              href="https://rxresu.me/hashproton/eduardo-carvalho"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center"
+            >
+              Resume
+              <ExternalLink className="ml-2 h-4 w-4" aria-hidden="true" />
+              <span className="sr-only">(opens in a new tab)</span>
+            </Link>
           </Button>
         </section>
       </main>

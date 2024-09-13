@@ -1,5 +1,3 @@
-import { StaticImageData } from "next/image";
-
 interface Job {
   title: string;
   company: string;
@@ -8,7 +6,7 @@ interface Job {
     end?: Date;
   };
   info: {
-    image: StaticImageData;
+    imageSrc: string;
     domain: string;
     technologiesKeys: string[];
     responsibilities: string[];
