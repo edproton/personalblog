@@ -24,21 +24,16 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://www.eduardocarvalho.com/",
+    url: "https://eduardocarvalho.work/",
     siteName: "Eduardo Carvalho Portfolio",
     images: [
       {
-        url: "https://www.eduardocarvalho.com/og-image.jpg",
+        url: "https://eduardocarvalho.work/profile.png",
         width: 1200,
         height: 630,
         alt: "Eduardo Carvalho - Full Stack Developer",
       },
     ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    site: "@yourtwitterhandle",
-    creator: "@yourtwitterhandle",
   },
 };
 
